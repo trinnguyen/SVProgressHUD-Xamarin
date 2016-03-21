@@ -11,11 +11,13 @@ prepare:
 	xcodebuild -project $(SRC_FOLDER)/$(PROJ_NAME) build -target SVProgressHUD -sdk iphonesimulator$(SDK) -arch i386
 	xcodebuild -project $(SRC_FOLDER)/$(PROJ_NAME) build -target SVProgressHUD -sdk iphoneos$(SDK)
 	lipo -create $(SRC_FOLDER)/build/Release-iphoneos/libSVProgressHUD.a $(SRC_FOLDER)/build/Release-iphonesimulator/libSVProgressHUD.a -output libSVProgressHUD.a
+	mkdir Resources
 	cp -r $(SRC_FOLDER)/SVProgressHUD/SVProgressHUD.bundle Resources/SVProgressHUD.bundle
 	
 build:
 	xbuild /p:Configuration=Release
-	cp bin/Release/$(DLL_NAME) $(DLL_NAME)
+	mkdir build
+	cp bin/Release/$(DLL_NAME) build/$(DLL_NAME)
 	
 clean:
-	rm -rf bin obj $(SRC_FOLDER)
+	rm -rf bin obj $(SRC_FOLDER) Resources *.a

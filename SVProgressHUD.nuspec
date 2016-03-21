@@ -14,6 +14,6 @@
     <tags>xamarin ios SVProgressHUD hud</tags>
   </metadata>
   <files>
-	  <file src="SVProgressHUD.dll" target="lib\Xamarin.iOS10" />
+	  <file src="build/SVProgressHUD.dll" target="lib\Xamarin.iOS10" />
   </files>
 </package>
