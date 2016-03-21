@@ -1,8 +1,8 @@
 MSBUILD=/Library/Frameworks/Mono.framework/Commands/xbuild
-SDK=8.1
+SDK=9.2
 SRC_FOLDER=SVProgressHUD-Xcode
 PROJ_NAME=SVProgressHUD.xcodeproj
-DLL_NAME=SVProgressHUDBinding.dll
+DLL_NAME=SVProgressHUD.dll
 
 all: prepare build clean
 	
@@ -11,7 +11,6 @@ prepare:
 	xcodebuild -project $(SRC_FOLDER)/$(PROJ_NAME) build -target SVProgressHUD -sdk iphonesimulator$(SDK) -arch i386
 	xcodebuild -project $(SRC_FOLDER)/$(PROJ_NAME) build -target SVProgressHUD -sdk iphoneos$(SDK)
 	lipo -create $(SRC_FOLDER)/build/Release-iphoneos/libSVProgressHUD.a $(SRC_FOLDER)/build/Release-iphonesimulator/libSVProgressHUD.a -output libSVProgressHUD.a
-	mkdir Resources
 	cp -r $(SRC_FOLDER)/SVProgressHUD/SVProgressHUD.bundle Resources/SVProgressHUD.bundle
 	
 build:
@@ -19,4 +18,4 @@ build:
 	cp bin/Release/$(DLL_NAME) $(DLL_NAME)
 	
 clean:
-	rm -rf bin obj $(SRC_FOLDER) Resources *.a
+	rm -rf bin obj $(SRC_FOLDER)

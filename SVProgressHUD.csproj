@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>SVProgressHUDBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>SVProgressHUDBinding</AssemblyName>
+    <AssemblyName>SVProgressHUD</AssemblyName>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
