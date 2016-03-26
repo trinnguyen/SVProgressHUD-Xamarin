@@ -22,3 +22,10 @@ xbuild:
 	
 clean:
 	rm -rf bin obj $(SRC_FOLDER) Resources *.a
+	
+nuget:
+	mono nuget.exe pack SVProgressHUD.nuspec
+	#mono nuget.exe push SVProgressHUD.2.0.nupkg
+	
+cleanall:
+	rm -rf build SVProgressHUD.*.nupkg

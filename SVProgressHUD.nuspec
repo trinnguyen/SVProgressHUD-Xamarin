@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>SVProgressHUD</id>
-    <version>2.0.8-beta</version>
+    <version>2.0</version>
     <title>SVProgressHUD</title>
     <authors>Tri Nguyen</authors>
     <owners>trinnguyen</owners>
     <projectUrl>https://github.com/trinnguyen/SVProgressHUD-Xamarin</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SVProgressHUD is a clean and easy-to-use HUD meant to display the progress of an ongoing task on iOS and tvOS. This binding is for getting it worked on Xamarin.iOS with fully access to all methods.</description>
-    <releaseNotes>Update latest release 2.0-beta8</releaseNotes>
+    <releaseNotes>Latest native SVProgressHUD 2.0</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>xamarin ios SVProgressHUD hud</tags>
   </metadata>
