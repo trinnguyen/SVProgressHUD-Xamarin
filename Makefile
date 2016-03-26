@@ -4,7 +4,7 @@ SRC_FOLDER=SVProgressHUD-Xcode
 PROJ_NAME=SVProgressHUD.xcodeproj
 DLL_NAME=SVProgressHUD.dll
 
-all: prepare build clean
+all: prepare xbuild clean
 	
 prepare:
 	git clone https://github.com/SVProgressHUD/SVProgressHUD.git $(SRC_FOLDER)
@@ -14,8 +14,9 @@ prepare:
 	mkdir Resources
 	cp -r $(SRC_FOLDER)/SVProgressHUD/SVProgressHUD.bundle Resources/SVProgressHUD.bundle
 	
-build:
+xbuild:
 	xbuild /p:Configuration=Release
+	rm -rf build
 	mkdir build
 	cp bin/Release/$(DLL_NAME) build/$(DLL_NAME)
 	
