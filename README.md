@@ -7,7 +7,7 @@ This binding is for getting it worked on Xamarin.iOS with fully access to all me
 Update latest native library version [**2.0**](https://github.com/SVProgressHUD/SVProgressHUD/releases/tag/2.0)
 
 ## Nuget
-* `Install-Package SVProgressHUD -Pre`
+* `Install-Package SVProgressHUD`
 * <https://www.nuget.org/packages/SVProgressHUD>
 
 ## Build
