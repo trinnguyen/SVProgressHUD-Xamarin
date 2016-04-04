@@ -1,5 +1,5 @@
 MSBUILD=/Library/Frameworks/Mono.framework/Commands/xbuild
-SDK=9.2
+SDK=9.3
 SRC_FOLDER=SVProgressHUD-Xcode
 PROJ_NAME=SVProgressHUD.xcodeproj
 DLL_NAME=SVProgressHUD.dll
