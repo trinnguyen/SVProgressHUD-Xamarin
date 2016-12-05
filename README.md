@@ -14,8 +14,34 @@ Update latest native library version [**2.1**](https://github.com/SVProgressHUD/
 * `make`
 * Output: `build/SVProgressHUD.dll`
 
-## Usage
-* `SVProgressHUD.Show();`
-* `SVProgressHUD.Dismiss();`
-* `using SVProgressHUDBinding`
+## Sample Code
+```
+using System;
+using SVProgressHUDBinding;
+using UIKit;
+
+namespace DemoHUD
+{
+	public partial class ViewController : UIViewController
+	{
+		protected ViewController(IntPtr handle) : base(handle)
+		{
+			// Note: this .ctor should not contain any initialization logic.
+		}
+
+		partial void BtnToggle_TouchUpInside(UIButton sender)
+		{
+			if (!SVProgressHUD.IsVisible)
+			{
+				//Show loading indicator
+				SVProgressHUD.Show();
+			}	else
+			{
+				//Hide loading indicator
+				SVProgressHUD.Dismiss();
+			}
+		}
+	}
+}
+```
 * Full documentation: <https://github.com/SVProgressHUD/SVProgressHUD>
