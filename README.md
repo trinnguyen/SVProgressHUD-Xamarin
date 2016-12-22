@@ -1,4 +1,5 @@
 # SVProgressHUD for Xamarin.iOS
+[![NuGet version](https://badge.fury.io/nu/SVProgressHUD.svg)](https://badge.fury.io/nu/SVProgressHUD)
 
 > [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) is a clean and easy-to-use HUD meant to display the progress of an ongoing task on iOS and tvOS. 
 
