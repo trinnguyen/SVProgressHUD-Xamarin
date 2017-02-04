@@ -4,8 +4,8 @@
     <id>SVProgressHUD</id>
     <version>2.1.2</version>
     <title>SVProgressHUD</title>
-    <authors>Tri Nguyen</authors>
-    <owners>Tobias Tiemerding</owners>
+    <authors>Tobias Tiemerding</authors>
+    <owners>Tri Nguyen</owners>
     <licenseUrl>https://github.com/trinnguyen/SVProgressHUD-Xamarin/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/trinnguyen/SVProgressHUD-Xamarin</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
