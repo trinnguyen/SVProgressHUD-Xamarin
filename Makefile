@@ -32,4 +32,4 @@ clean-all:
 
 nuget:
 	nuget pack SVProgressHUD.nuspec
-	nuget push SVProgressHUD.$(NATIVE_RELEASE).nupkg
+	nuget push SVProgressHUD.$(NATIVE_RELEASE).nupkg -Source nuget.org
