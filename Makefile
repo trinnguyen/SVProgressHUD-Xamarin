@@ -1,12 +1,12 @@
 MSBUILD=/Library/Frameworks/Mono.framework/Commands/xbuild
-SDK=10.2
+SDK=11.0
 SRC_FOLDER=SVProgressHUD-Xcode
 PROJ_NAME=SVProgressHUD.xcodeproj
 DLL_NAME=SVProgressHUD.dll
-NATIVE_RELEASE=2.1.2
+NATIVE_RELEASE=2.2.1
 SRC_FOLDER=SVProgressHUD-$(NATIVE_RELEASE)
 
-all: prepare xcodebuild xbuild clean
+all: prepare xcodebuild msbuild clean
 	
 prepare:
 	curl -L https://github.com/SVProgressHUD/SVProgressHUD/archive/$(NATIVE_RELEASE).zip | tar xz
@@ -18,8 +18,8 @@ xcodebuild:
 	mkdir Resources
 	cp -r $(SRC_FOLDER)/SVProgressHUD/SVProgressHUD.bundle Resources/SVProgressHUD.bundle
 	
-xbuild:
-	xbuild /p:Configuration=Release
+msbuild:
+	msbuild /p:Configuration=Release
 	rm -rf build
 	mkdir build
 	cp bin/Release/$(DLL_NAME) build/$(DLL_NAME)
