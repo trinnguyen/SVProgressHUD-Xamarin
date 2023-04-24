@@ -6,6 +6,7 @@
     <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{7FB49328-04B2-46BB-8378-54D3842B2369}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <OutputPath>bin\$(Configuration)\Xamarin</OutputPath>
     <RootNamespace>SVProgressHUDBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>SVProgressHUD</AssemblyName>
@@ -16,7 +17,6 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,6 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -41,9 +40,12 @@
     <Folder Include="Resources\SVProgressHUD.bundle\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="libSVProgressHUD.linkwith.cs">
-      <DependentUpon>libSVProgressHUD.a</DependentUpon>
-    </Compile>
+    <NativeReference Include="libSVProgressHUD.a">
+      <Kind>Static</Kind>
+      <SmartLink>True</SmartLink>
+      <Frameworks>QuartzCore</Frameworks>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
@@ -65,8 +67,5 @@
     <BundleResource Include="Resources\SVProgressHUD.bundle\success.png" />
     <BundleResource Include="Resources\SVProgressHUD.bundle\success%402x.png" />
     <BundleResource Include="Resources\SVProgressHUD.bundle\success%403x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingNativeLibrary Include="libSVProgressHUD.a" />
   </ItemGroup>
 </Project>
