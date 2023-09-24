@@ -12,8 +12,13 @@
     <description>SVProgressHUD is a clean and easy-to-use HUD meant to display the progress of an ongoing task on iOS and tvOS.</description>
     <copyright>Copyright 2018</copyright>
     <tags>xamarin ios SVProgressHUD hud</tags>
+    <dependencies>
+        <group targetFramework="Xamarin.iOS10"/>
+        <group targetFramework="net7.0-ios15.0"/>
+    </dependencies>
   </metadata>
   <files>
-	  <file src="build/SVProgressHUD.dll" target="lib/Xamarin.iOS10" />
+	  <file src="build/Xamarin/SVProgressHUD.dll" target="lib/Xamarin.iOS10" />
+	  <file src="build/DotNet/SVProgressHUD.dll" target="lib/net7.0-ios15.0" />
   </files>
 </package>
