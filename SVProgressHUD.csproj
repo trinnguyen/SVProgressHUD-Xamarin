@@ -1,44 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{7FB49328-04B2-46BB-8378-54D3842B2369}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <OutputPath>bin\$(Configuration)\Xamarin</OutputPath>
+    <TargetFramework>net7.0-ios</TargetFramework>
     <RootNamespace>SVProgressHUDBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>SVProgressHUD</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>false</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+
+    <OutputPath>bin\$(Configuration)\DotNet</OutputPath>
+    <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>False</AppendRuntimeIdentifierToOutputPath>
+    
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoBindingEmbedding>false</NoBindingEmbedding>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="Xamarin.iOS" />
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Resources\SVProgressHUD.bundle\" />
-  </ItemGroup>
+
   <ItemGroup>
     <NativeReference Include="libSVProgressHUD.a">
       <Kind>Static</Kind>
@@ -46,26 +28,5 @@
       <Frameworks>QuartzCore</Frameworks>
       <ForceLoad>True</ForceLoad>
     </NativeReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
-  <ItemGroup>
-    <BundleResource Include="Resources\SVProgressHUD.bundle\angle-mask.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\angle-mask%402x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\angle-mask%403x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\error.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\error%402x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\error%403x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\info.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\info%402x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\info%403x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\success.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\success%402x.png" />
-    <BundleResource Include="Resources\SVProgressHUD.bundle\success%403x.png" />
   </ItemGroup>
 </Project>
