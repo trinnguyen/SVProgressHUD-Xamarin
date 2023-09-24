@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-ios15.0</TargetFramework>
+    <TargetFramework>net7.0-ios</TargetFramework>
     <RootNamespace>SVProgressHUDBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>SVProgressHUD</AssemblyName>
