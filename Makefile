@@ -3,7 +3,7 @@ SRC_FOLDER=SVProgressHUD-Xcode
 PROJ_NAME=SVProgressHUD.xcodeproj
 DLL_NAME=SVProgressHUD.dll
 NATIVE_RELEASE=2.2.5
-NUET_VERSION=2.2.5.1
+NUET_VERSION=2.2.5.2
 SRC_FOLDER=SVProgressHUD-$(NATIVE_RELEASE)
 
 all: prepare xcodebuild build clean
