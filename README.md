@@ -9,6 +9,7 @@
 Try `SVProgressHUD` on [Appetize.io](https://appetize.io/app/p8r2cvy8kq74x7q7tjqf5gyatr).
 
 ## Xamarin.iOS Binding
+**Net 7.0 for iOS is supported**
 * This binding is for getting it worked on Xamarin.iOS with fully access to all methods.
 * Original Objective-C library: https://github.com/SVProgressHUD/SVProgressHUD
 

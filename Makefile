@@ -1,12 +1,12 @@
-MSBUILD=/Library/Frameworks/Mono.framework/Commands/xbuild
 SDK=17.0
 SRC_FOLDER=SVProgressHUD-Xcode
 PROJ_NAME=SVProgressHUD.xcodeproj
 DLL_NAME=SVProgressHUD.dll
 NATIVE_RELEASE=2.2.5
+NUET_VERSION=2.2.5.1
 SRC_FOLDER=SVProgressHUD-$(NATIVE_RELEASE)
 
-all: prepare xcodebuild msbuild clean
+all: prepare xcodebuild build clean
 	
 prepare:
 	curl -L https://github.com/SVProgressHUD/SVProgressHUD/archive/$(NATIVE_RELEASE).zip | tar xz
@@ -18,21 +18,16 @@ xcodebuild:
 	mkdir Resources
 	cp -r $(SRC_FOLDER)/SVProgressHUD/SVProgressHUD.bundle Resources/SVProgressHUD.bundle
 	
-msbuild:
-	msbuild /p:Configuration=Release SVProgressHUD.csproj
-	dotnet build -c Release SVProgressHUD.DotNet.csproj
-	rm -rf build
-	mkdir -p build/Xamarin
-	mkdir -p build/DotNet
-	cp bin/Release/Xamarin/$(DLL_NAME) build/Xamarin/$(DLL_NAME)
-	cp bin/Release/DotNet/${DLL_NAME} build/DotNet/${DLL_NAME}
+# Output bin/Release/DotNet/SVProgressHUD.dll
+build:
+	dotnet build -c Release SVProgressHUD.csproj
 	
 clean:
-	rm -rf bin obj $(SRC_FOLDER) Resources *.a
+	rm -rf obj $(SRC_FOLDER) Resources *.a
 
 clean-all:
-	rm -rf build *.nupkg
+	rm -rf *.nupkg
 
 nuget:
 	nuget pack SVProgressHUD.nuspec
-	nuget push SVProgressHUD.$(NATIVE_RELEASE).nupkg -Source nuget.org
+	nuget push SVProgressHUD.$(NUET_VERSION).nupkg -Source nuget.org
