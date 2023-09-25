@@ -7,18 +7,27 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>false</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
-
-    <OutputPath>bin\$(Configuration)\DotNet</OutputPath>
-    <AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
-    <AppendRuntimeIdentifierToOutputPath>False</AppendRuntimeIdentifierToOutputPath>
     
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoBindingEmbedding>false</NoBindingEmbedding>
+    
+    <!-- Nuget package -->
+    <PackageId>SVProgressHUD</PackageId>
+    <Version>2.2.5.3</Version>
+    <Authors>Tri Nguyen</Authors>
+    <Title>SVProgressHUD</Title>
+    <PackageProjectUrl>https://github.com/trinnguyen/SVProgressHUD-Xamarin</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>SVProgressHUD binding for Net 7.0 iOS</Description>
+    <PackageReleaseNotes>SVProgressHUD binding for Net 7.0 iOS</PackageReleaseNotes>
+    <PackageTags>xamarin ios SVProgressHUD hud</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+    <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>
