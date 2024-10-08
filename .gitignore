@@ -1,4 +1,7 @@
 /bin
 /obj
+/build
 *.nupkg
 *.a
+/SVProgressHUD-*
+*.xcframework

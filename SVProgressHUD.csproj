@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-ios</TargetFramework>
+    <TargetFramework>net8.0-ios</TargetFramework>
     <RootNamespace>SVProgressHUDBinding</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>SVProgressHUD</AssemblyName>
@@ -8,18 +8,15 @@
     <ImplicitUsings>false</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
     
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <NoBindingEmbedding>false</NoBindingEmbedding>
-    
     <!-- Nuget package -->
     <PackageId>SVProgressHUD</PackageId>
-    <Version>2.2.5.3</Version>
+    <Version>2.3.1.1</Version>
     <Authors>Tri Nguyen</Authors>
     <Title>SVProgressHUD</Title>
     <PackageProjectUrl>https://github.com/trinnguyen/SVProgressHUD-Xamarin</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>SVProgressHUD binding for Net 7.0 iOS</Description>
-    <PackageReleaseNotes>SVProgressHUD binding for Net 7.0 iOS</PackageReleaseNotes>
+    <Description>SVProgressHUD binding for Net 8.0 iOS</Description>
+    <PackageReleaseNotes>SVProgressHUD binding for Net 8.0 iOS</PackageReleaseNotes>
     <PackageTags>xamarin ios SVProgressHUD hud</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
@@ -31,11 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <NativeReference Include="libSVProgressHUD.a">
-      <Kind>Static</Kind>
-      <SmartLink>True</SmartLink>
+    <NativeReference Include="SVProgressHUD.xcframework">
+      <Kind>Framework</Kind>
       <Frameworks>QuartzCore</Frameworks>
-      <ForceLoad>True</ForceLoad>
     </NativeReference>
   </ItemGroup>
 </Project>

@@ -6,39 +6,6 @@ using UIKit;
 
 namespace SVProgressHUDBinding
 {
-    [Static]
-    //[Verify(ConstantsInterfaceAssociation)]
-    partial interface Constants
-    {
-        // extern NSString *const _Nonnull SVProgressHUDDidReceiveTouchEventNotification;
-        [Field("SVProgressHUDDidReceiveTouchEventNotification", "__Internal")]
-        NSString SVProgressHUDDidReceiveTouchEventNotification { get; }
-
-        // extern NSString *const _Nonnull SVProgressHUDDidTouchDownInsideNotification;
-        [Field("SVProgressHUDDidTouchDownInsideNotification", "__Internal")]
-        NSString SVProgressHUDDidTouchDownInsideNotification { get; }
-
-        // extern NSString *const _Nonnull SVProgressHUDWillDisappearNotification;
-        [Field("SVProgressHUDWillDisappearNotification", "__Internal")]
-        NSString SVProgressHUDWillDisappearNotification { get; }
-
-        // extern NSString *const _Nonnull SVProgressHUDDidDisappearNotification;
-        [Field("SVProgressHUDDidDisappearNotification", "__Internal")]
-        NSString SVProgressHUDDidDisappearNotification { get; }
-
-        // extern NSString *const _Nonnull SVProgressHUDWillAppearNotification;
-        [Field("SVProgressHUDWillAppearNotification", "__Internal")]
-        NSString SVProgressHUDWillAppearNotification { get; }
-
-        // extern NSString *const _Nonnull SVProgressHUDDidAppearNotification;
-        [Field("SVProgressHUDDidAppearNotification", "__Internal")]
-        NSString SVProgressHUDDidAppearNotification { get; }
-
-        // extern NSString *const _Nonnull SVProgressHUDStatusUserInfoKey;
-        [Field("SVProgressHUDStatusUserInfoKey", "__Internal")]
-        NSString SVProgressHUDStatusUserInfoKey { get; }
-    }
-
     // typedef void (^SVProgressHUDShowCompletion)();
     delegate void SVProgressHUDShowCompletion();
 
